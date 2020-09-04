@@ -193,7 +193,7 @@ const generateHeartRating = (number) => {
     //This renders the bookmark list in the DOM
     const bookmarkListString = generateBookmarkListString(bookmarks);
     //This inserts the HTML into the DOM
-    $('.js-add-bookmark').html(!store.addNewBookmark ? 'add bookmark' : 'cancel bookmark');
+    $('.js-add-bookmark').html(!store.addNewBookmark ? '+ bookmark' : 'cancel');
     $('#js-bookmark-list').html(bookmarkListString);
   };
 
