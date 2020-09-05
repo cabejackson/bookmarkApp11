@@ -28,7 +28,7 @@ Did the student use namespacing to adhere to good architecture practices?
 Did the student follow the React-ful design pattern - change your state, re-render your component?
 -- yes
 Did the student use semantic HTML?
--- yes
+-- yes, used https://validator.w3.org/ to check
 Did the student use a responsive and mobile-first design?
 -- yes, see index.css and/or test out on "toggles device toolbar" using inspect
 Did the student follow a11y best practices? (https://a11yproject.com/checklist/)

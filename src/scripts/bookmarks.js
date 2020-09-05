@@ -246,8 +246,10 @@ const generateHeartRating = (number) => {
     $('#js-bookmark-list').html(bookmarkListString);
   };
 
-// Does the user receive feedback when errors occur?
+// Does the user receive feedback when errors occur? 
   // yes + errors occur whenever user doesn't complete required fields in form
+  // user feedback for incorrect url is:
+    // "Attribute `url` must be min length 5 and begin http(s)://""
   const generateError = (message) => {
     return `
         <section class="error-content">
@@ -268,7 +270,6 @@ const getItemIdFromElement = function (item) {
 
 // -----------------------event handlers -------------- //
 
-//still working on this, but it's functioning now
 const renderError = () => {
     if (store.error) {
       const el = generateError(store.error);
@@ -277,9 +278,10 @@ const renderError = () => {
       $('.error-container').empty();
     }
   };
-//still working on this, but it's functioning now
+//ask mentor about this
   const handleCloseError = () => {
-    $('.error-container').on('click', '#cancel-error', () => {
+    $('.error-content').on('click', '#cancel-error', () => {
+      // console.log('error button is working');
       store.setError(null);
       renderError();
     });

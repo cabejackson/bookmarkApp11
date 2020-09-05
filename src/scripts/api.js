@@ -19,9 +19,10 @@ const listApiFetch = function (...args) {
    })
    .then(data => {
      if (error) {
-       error.message = data.message;
+       error.message = data.message; //ask mentor about this
        return Promise.reject(error);
      }
+     //console.log(error.message) //ask mentor about this - the message shows once error happens
      return data;
    });
 };
