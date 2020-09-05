@@ -14,11 +14,12 @@ To Thinkful's Engineering Immersion Course TAs, instructors and my mentor (Prave
 # User Stories Listed Below:
 
     As a user:
-      I can add bookmarks to my bookmark list. Bookmarks contain:
-      title
-      url link
-      description
-      rating (1-5)
+      I can add bookmarks to my bookmark list. 
+      Bookmarks contain:
+        title
+        url link
+        description
+        rating (1-5)
       
       I can see a list of my bookmarks when I first open the app
       All bookmarks in the list default to a "condensed" view showing only title and rating

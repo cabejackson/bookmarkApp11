@@ -5,6 +5,8 @@ import api from './api';
 //This bookmark.js file holds all the event listeners for the app
 //and the html that's being rendered in the page
 
+
+
 //User story Requirement met upon initially loading page:
 // "I can see a list of my bookmarks when I first open the app"
 // should be able to see the bookmarks I added as tests
@@ -40,6 +42,20 @@ const generateMainPageLayout = () => {
 //generateForm meets the following user stories:
 // "I can add bookmarks to my bookmark list. Bookmarks contain: title, url link, description, rating (1-5)"
 // "I receive appropriate feedback when I cannot submit a bookmark"
+  // NOTE: 
+      // the handleSubmitNewBookmark event handler actually controls the submission of the bookmarks
+      // AND the handleAddNewBookmarkClick event handler allows user to open bookmark form (generateForm)
+
+
+
+// Did the student use a <form> to add a new bookmark that contains 
+// required fields to capture a bookmark's title, url, description and rating?
+  // yes, see generateForm below:
+// Did the student group and label inputs appropriately?
+  // yes, see generateForm below:
+
+
+
 
 //generateForm is the form page with a place to input: Title, URL, rating and description 
 const generateForm = () => {
@@ -202,6 +218,18 @@ const generateHeartRating = (number) => {
     return bookmarks.join('');
   };
 
+
+
+// Did the student create at least one render function 
+// (that may or may not call other rendering functions) 
+// that conditionally replaces the content of the <main> tag 
+// based upon the properties held within the `store`?
+  // Yes, see below:
+// Is all JavaScript that updates the DOM of the page located inside of a rendering function?
+  // Yes, see below: 
+  //for example: 
+      // $('.js-add-new-bookmark').html(generateForm());
+
   const render = () => {
     renderError();
     $('main').html(generateMainPageLayout);
@@ -218,6 +246,8 @@ const generateHeartRating = (number) => {
     $('#js-bookmark-list').html(bookmarkListString);
   };
 
+// Does the user receive feedback when errors occur?
+  // yes + errors occur whenever user doesn't complete required fields in form
   const generateError = (message) => {
     return `
         <section class="error-content">
@@ -233,10 +263,13 @@ const getItemIdFromElement = function (item) {
       .data('item-id');
 };
 
+//Did the student update `store` properties only within event handler functions?
+  // yes, see e handlers below:
+
 // -----------------------event handlers -------------- //
 
-//still working on this
-  const renderError = () => {
+//still working on this, but it's functioning now
+const renderError = () => {
     if (store.error) {
       const el = generateError(store.error);
       $('.error-container').html(el);
@@ -252,7 +285,7 @@ const getItemIdFromElement = function (item) {
     });
   };
 
-  
+// event handler that allows user to open bookmark form 
   const handleAddNewBookmarkClick = () => {
     $('main').on('click','.js-add-bookmark', event => {
         event.preventDefault();
@@ -260,7 +293,7 @@ const getItemIdFromElement = function (item) {
         render();
     });
 };
-  
+// event handler that handles bookmark submission  
 const handleSubmitNewBookmark = () => {
     //console.log('CREATE BUTTON BOOKMARKS');
     $('main').on('submit', '.js-add-new-bookmark-form', event => {
@@ -325,6 +358,7 @@ const handleDeleteBookmark = () => {
 //Description is editable, but the edits aren't saving correctly just yet!
 //handleBookmarkSaveClick meets the following user story:
 //I can edit the rating and description of a bookmark in my list
+
 const handleBookmarkSaveClick = () => {
     $('main').on('click', '.js-bookmark-save', event => {
       const bookmarkId = getItemIdFromElement(event.currentTarget);
@@ -353,6 +387,8 @@ $.fn.extend({
     }
 });
 
+//Did the student create single-purpose event handler functions to handle all events?
+// Yes, see below + e handlers are commented w/ their purpose
 const bindEventListeners = () => {
     handleAddNewBookmarkClick();
     handleSubmitNewBookmark();

@@ -32,18 +32,14 @@ function findAndUpdate(id, newData) {
 function findAndDelete(id) {
    this.bookmarks = this.bookmarks.filter(currentBookmark => currentBookmark.id !== id);
 }
-// function addBookmark(bookmark) {
-//   let expand = {expand:true};
-//    //console.log('store expanded', expand)
-//   bookmark = {...bookmark, ...expand}
-//   this.bookmarks.push(bookmark);
-// }
 
 function toggleAddNewBookmark() {
    this.addNewBookmark = !this.addNewBookmark;
 }
 
-
+// Does the student's 'store' module contain an exported object containing 
+// all of the data necessary to render the application?
+      // yup! All that's exported is used in bookmarks.js file
 
 export default {
    bookmarks,

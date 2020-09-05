@@ -6,3 +6,31 @@ Did the student create a README.md file that includes a link to the live app, a 
 --yes, see README.md file on repo page
 Did the student implement each of the user stories listed in their README file?
 --yes, commented throughout the code where each user story was met
+Did the student create modules in separate files to organize their code?
+--yes, the scripts files are all within their own folder & there's one CSS file for styling
+Did the student logically group their functions within the appropriately named modules (examples: api, store)?
+-- yes, bookmarks.js holds both the e handlers and html. 
+        Whereas store holds the global variables and helpful functions used in bookmark.js. 
+        Then all api functions are held in the api.js file
+Is the HTML file's <main> tag empty?
+--yes, see index.html file (lol I almost added this comment in there, but then would it be empty!?)
+Did the student create template generation functions to generate the HTML content?
+ These functions should be single-purpose functions whose return values are HTML template strings.
+-- yes comments w/in bookmarks.js explain their purpose and the e. handlers their connected to
+//Did the student call their rendering function anytime they updated a `store` property?
+-- yes, each e handler calls "render()"
+Is the user able to use their keyboard to navigate through the app?
+-- yes, reviewed this with mentor
+Did the student use fetch for AJAX calls and jQuery for accessing DOM elements?
+-- yes, see api.js file
+Did the student use namespacing to adhere to good architecture practices?
+-- yes
+Did the student follow the React-ful design pattern - change your state, re-render your component?
+-- yes
+Did the student use semantic HTML?
+-- yes
+Did the student use a responsive and mobile-first design?
+-- yes, see index.css and/or test out on "toggles device toolbar" using inspect
+Did the student follow a11y best practices? (https://a11yproject.com/checklist/)
+-- yes, added a11y best practices to form & tested colors used
+
