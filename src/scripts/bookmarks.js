@@ -24,7 +24,7 @@ const generateMainPageLayout = () => {
         <div class="even-flex js-add-bookmark-button ">
           <button class='js-add-bookmark shadow'></button>
           <select class='js-filter-rating shadow'>
-            <option value="0">minimum rating</option>
+            <option value="0">rating</option>
             <option value="1">1+ ♥</option>
             <option value="2">2+ ♥</option>
             <option value="3">3+ ♥</option>
@@ -242,7 +242,7 @@ const generateHeartRating = (number) => {
     //This renders the bookmark list in the DOM
     const bookmarkListString = generateBookmarkListString(bookmarks);
     //This inserts the HTML into the DOM
-    $('.js-add-bookmark').html(!store.addNewBookmark ? 'add bookmark' : 'cancel bookmark');
+    $('.js-add-bookmark').html(!store.addNewBookmark ? 'add' : 'cancel');
     $('#js-bookmark-list').html(bookmarkListString);
   };
 
