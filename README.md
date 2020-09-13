@@ -1,5 +1,4 @@
 # bookmarkApp11
-# Bookmark App - revision
 This is a neat bookmark app!
 ### Check it out --> https://cabejackson.github.io/bookmarkApp11/
 ## About Me
